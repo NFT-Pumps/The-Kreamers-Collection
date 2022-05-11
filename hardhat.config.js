@@ -39,12 +39,14 @@ module.exports = {
     currency: 'USD',
     token: 'ETH',
     coinmarketcap: process.env.CMCAPI, //'00a4f49a-2c1b-4315-8209-0599ae260257',
-    gasPriceApi:	'https://api.etherscan.io/api?module=proxy&action=eth_gasPrice',
+    gasPriceApi: 'https://api.etherscan.io/api?module=proxy&action=eth_gasPrice',
     gasPrice: 77
   },
   mocha: {
     reporter: 'eth-gas-reporter',
-    //reporterOptions : {  } // See options below
+    reporterOptions: {
+      url: 'http://localhost:8545'
+    } // See options below
   },
   // defaultNetwork: "hardhat",
   // defaultNetwork: "rinkeby",
@@ -69,5 +71,5 @@ module.exports = {
   //     url: `https://mainnet.infura.io/v3/${PROJECT_ID}`,
   //     accounts: [`0x${PK}`],
   //   }
-  // }
+  // }  
 };
