@@ -154,10 +154,10 @@ if (true == true)
             it("Mints a presale token from Dapp", async function () {
 
                 const PurchaseArray = [
-                    { amount: 50, value: "0" },
-                    { amount: 50, value: "0" },
-                    { amount: 50, value: "0" },
-                    { amount: 50, value: "0" }
+                    { amount: 1, value: "0.05" },
+                    { amount: 1, value: "0.05" },
+                    { amount: 1, value: "0.05" },
+                    { amount: 1, value: "0.05" }
                 ];
 
                 //Enable Mint Whitelist
@@ -169,7 +169,7 @@ if (true == true)
                 for (let index = 0; index < PurchaseArray.length; index++) {
                     const element = PurchaseArray[index];
                     await currentToken.whitelistClaimMint(element.amount, 255,
-                        whitelistClaimPass[1], { value: ethers.utils.parseEther("0.0") });
+                        whitelistClaimPass[1], { value: ethers.utils.parseEther(element.value) });
                 }
 
                 // await currentToken.whitelistClaimMint(
@@ -263,7 +263,7 @@ it("Will not allow mint over threshold", async function () {
     await currentToken.togglePublicMint();
 
     const PurchaseArray = [
-        { amount: 101, value: "7.07" }
+        { amount: 51, value: "100" }
     ];
 
     const [adminWallet, userWallet] = await ethers.getSigners();
