@@ -154,10 +154,10 @@ if (true == true)
             it("Mints a presale token from Dapp", async function () {
 
                 const PurchaseArray = [
-                    { amount: 1, value: "0.05" },
-                    { amount: 1, value: "0.05" },
-                    { amount: 1, value: "0.05" },
-                    { amount: 1, value: "0.05" }
+                    { amount: 1, value: "0.055" },
+                    { amount: 1, value: "0.055" },
+                    { amount: 1, value: "0.055" },
+                    { amount: 1, value: "0.055" }
                 ];
 
                 //Enable Mint Whitelist
