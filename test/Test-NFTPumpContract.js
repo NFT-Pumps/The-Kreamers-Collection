@@ -116,15 +116,15 @@ if (true == true)
 
                 const PurchaseArray = [
                     { amount: 10, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" },
-                    { amount: 50, value: "5" }
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" },
+                    { amount: 50, value: "8" }
                     // { amount: 5, value: "0.35" },
                     // { amount: 10, value: "0.7" },
                     //{ amount: 100, value: "7" }

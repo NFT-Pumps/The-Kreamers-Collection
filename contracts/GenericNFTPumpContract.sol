@@ -34,7 +34,7 @@ contract GenericNFTPumpContract is Ownable, ERC721, ERC721URIStorage, PaymentSpl
     uint256 public constant MAX_TOKENS = 3100;
     uint256 public publicMintMaxLimit = 50;
     uint256 public whitelistMintMaxLimit = 50;
-    uint256 public tokenPrice = 0.1 ether;
+    uint256 public tokenPrice = 0.14 ether;
     uint256 public whitelistTokenPrice = 0.055 ether;
     uint256 public maxWhitelistPassMints = 900;
 
