@@ -48,7 +48,7 @@ module.exports = {
       url: 'http://localhost:8545'
     } // See options below
   },
-  // defaultNetwork: "hardhat",
+  defaultNetwork: "hardhat",
   // defaultNetwork: "rinkeby",
   // etherscan: {
   //   apiKey: ETHERSCAN_API_KEY,
@@ -61,15 +61,15 @@ module.exports = {
   //   }
   // }
 
-  // defaultNetwork: "mainnet",
-  // etherscan: {
-  //   apiKey: ETHERSCAN_API_KEY,
-  // },
-  // networks: {
-  //   hardhat: { chainId: 1 },
-  //   mainnet: {
-  //     url: `https://mainnet.infura.io/v3/${PROJECT_ID}`,
-  //     accounts: [`0x${PK}`],
-  //   }
-  // }  
+  defaultNetwork: "mainnet",
+  etherscan: {
+    apiKey: ETHERSCAN_API_KEY,
+  },
+  networks: {
+    hardhat: { chainId: 1 },
+    mainnet: {
+      url: `https://mainnet.infura.io/v3/${PROJECT_ID}`,
+      accounts: [`0x${PK}`],
+    }
+  }  
 };

@@ -1,4 +1,4 @@
-// npx hardhat run --network rinkeby scripts/deployAndVerify.js
+// npx hardhat run scripts/deployAndVerify.js
 const hre = require("hardhat");
 const ethers = hre.ethers;
 const args = require("./deployArgs")
