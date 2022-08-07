@@ -82,6 +82,9 @@ if (true == true)
             console.log("ToggleMint");
             await currentToken.togglePublicMint();
 
+            console.log("Toggle Bogo");
+            await currentToken.toggleBogoMint();
+
             ethBalance = ethers.utils.formatEther(await ethers.provider.getBalance(owner.address));
             console.log("After Deploy Balance" + ethBalance);
 
@@ -151,6 +154,37 @@ if (true == true)
                 expect(parseInt(totalSupply)).to.lessThan(parseInt(totalSupply2));
             });
 
+            it("Mints a BOGO token from Dapp", async function () {
+
+                const PurchaseArray = [
+                    { amount: 10, value: "5" },
+                    { amount: 10, value: "5" },
+                    // { amount: 5, value: "0.35" },
+                    // { amount: 10, value: "0.7" },
+                    //{ amount: 100, value: "7" }
+                ];
+
+                const [adminWallet, userWallet] = await ethers.getSigners();
+                const timestamp = Date.now();
+
+                //Step 4: Turn on Sales
+                const PreMintCount = await currentToken.balanceOf(adminWallet.address)
+                const totalSupply = await currentToken.totalSupply();
+
+                TotalAmount = +PreMintCount;
+
+                for (let index = 0; index < PurchaseArray.length; index++) {
+                    const element = PurchaseArray[index];
+                    await currentToken.bogoMint(element.amount, { value: ethers.utils.parseEther(element.value) });
+                    TotalAmount = TotalAmount + element.amount;
+                }
+
+                const PostMintCount = await currentToken.balanceOf(adminWallet.address);
+                const totalSupply2 = await currentToken.totalSupply();
+
+                expect(parseInt(totalSupply)).to.lessThan(parseInt(totalSupply2));
+            });
+
             it("Mints a presale token from Dapp", async function () {
 
                 const PurchaseArray = [
@@ -162,7 +196,7 @@ if (true == true)
 
                 //Enable Mint Whitelist
                 await currentToken.togglePresaleMint();
-                await currentToken.togglePresaleMint();
+                // await currentToken.togglePresaleMint();
 
                 const totalSupply = await currentToken.totalSupply();
 
@@ -390,7 +424,7 @@ it("Burn Token", async function () {
 });
 
 it("Set Multiple Parameters", async function () {
-    await currentToken.setParams('70000000000000000', '50000000000000000', '20', '5', true, true);
+    await currentToken.setParams('70000000000000000', '50000000000000000', '20', '5', true, true, true);
 });
 
 it("Gets Total Supply", async function () {
