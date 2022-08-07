@@ -39,7 +39,7 @@ if (true == true)
             let ethBalance = ethers.utils.formatEther(await ethers.provider.getBalance(owner.address));
             console.log("Start Balance: " + ethBalance);
 
-            const currentContract = await ethers.getContractFactory("GenericNFTPumpContract");
+            const currentContract = await ethers.getContractFactory("TheKreamerCollection");
             currentToken = await currentContract.deploy(
                 'Test Contract',
                 'Test',
