@@ -1,0 +1,18 @@
+{
+  '0x9Dc7D54E10A199C00176FFA68459fD9b15A706c4': {
+    q: 5,
+    whitelistClaimPass: {
+      r: '0x76fe5a257a4107665c65d887403d8e02ac3a0f05b3c87eb1ddedb294053b9191',
+      s: '0x070c50e03dd899039bd029c1dbeae93a41c8d8e313db08bfe26627cb595d5477',
+      v: 27
+    }
+  },
+  '0xCd43AdcB61949ab14D3f4574BFbDA53d46389715': {
+    q: 1,
+    whitelistClaimPass: {
+      r: '0x6b6298f895223247b751fb252ba75d819bb9038679c47f00e5a4e89b9f29855f',
+      s: '0x6d0b47535fd1e003af8a58aa6072d75e762e2900e2fbd1296868559222341635',
+      v: 28
+    }
+  }
+}
