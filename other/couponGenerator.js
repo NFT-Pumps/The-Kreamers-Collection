@@ -23,7 +23,8 @@ async function getClaimCodes() {
 
     let presaleAddresses = [
         { address : '0x9Dc7D54E10A199C00176FFA68459fD9b15A706c4', qty : 10},
-        { address : '0xc64898baa01909f512d7b96D470ABD346f1871f9', qty : 2},
+        { address : '0xc64898baa01909f512d7b96D470ABD346f1871f9', qty : 14},
+        { address : '0xE4cD887b35C7a7941EEbE8336c6Bfc5d1E9f7bfA', qty : 60},
         { address : '0xCd43AdcB61949ab14D3f4574BFbDA53d46389715', qty : 12}       
     ]      
     
